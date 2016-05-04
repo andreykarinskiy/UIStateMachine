@@ -84,6 +84,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\MacroPlayerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MacroRecorderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,8 +100,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Events\PlayerSelected.cs" />
+    <Compile Include="Events\RecorderSelected.cs" />
     <Compile Include="ShellBootstrapper.cs" />
+    <Compile Include="ViewModels\MacroPlayerViewModel.cs" />
+    <Compile Include="ViewModels\MacroRecorderViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="Views\MacroPlayerView.xaml.cs">
+      <DependentUpon>MacroPlayerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MacroRecorderView.xaml.cs">
       <DependentUpon>MacroRecorderView.xaml</DependentUpon>
     </Compile>
