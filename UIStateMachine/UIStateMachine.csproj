@@ -100,6 +100,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\EventAggregatorExtension.cs" />
     <Compile Include="Events\PlayerSelected.cs" />
     <Compile Include="Events\RecorderSelected.cs" />
     <Compile Include="ShellBootstrapper.cs" />

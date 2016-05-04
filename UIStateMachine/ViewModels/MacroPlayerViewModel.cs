@@ -7,6 +7,7 @@
     using Prism.Mvvm;
     using Prism.Regions;
 
+    using UIStateMachine.Core;
     using UIStateMachine.Events;
     using UIStateMachine.Views;
 
@@ -24,7 +25,7 @@
 
         private void GoToRecorder()
         {
-            eventAggregator.GetEvent<PubSubEvent<RecorderSelected>>().Publish(new RecorderSelected());
+            eventAggregator.Publish(new RecorderSelected());
         }
     }
 }

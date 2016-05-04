@@ -6,6 +6,7 @@
     using Prism.Mvvm;
     using Prism.Regions;
 
+    using UIStateMachine.Core;
     using UIStateMachine.Events;
 
     public class MacroRecorderViewModel : BindableBase
@@ -22,7 +23,7 @@
 
         private void ToPlayer()
         {
-            eventAggregator.GetEvent<PubSubEvent<PlayerSelected>>().Publish(new PlayerSelected());
+            eventAggregator.Publish(new PlayerSelected());
         }
     }
 }

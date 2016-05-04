@@ -10,6 +10,7 @@ namespace UIStateMachine.ViewModels
     using Prism.Mvvm;
     using Prism.Regions;
 
+    using UIStateMachine.Core;
     using UIStateMachine.Events;
     using UIStateMachine.Views;
 
@@ -25,8 +26,8 @@ namespace UIStateMachine.ViewModels
             regionManager.RegisterViewWithRegion("Controls", typeof(MacroRecorderView));
             regionManager.RegisterViewWithRegion("Controls", typeof(MacroPlayerView));
 
-            eventAggregator.GetEvent<PubSubEvent<RecorderSelected>>().Subscribe(Handle);
-            eventAggregator.GetEvent<PubSubEvent<PlayerSelected>>().Subscribe(Handle);
+            eventAggregator.Subscribe<RecorderSelected>(Handle);
+            eventAggregator.Subscribe<PlayerSelected>(Handle);
         }
 
         private void Handle(RecorderSelected e)
