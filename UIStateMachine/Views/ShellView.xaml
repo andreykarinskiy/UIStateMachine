@@ -9,5 +9,5 @@
         Width="525"
         Height="350"
         mvvm:ViewModelLocator.AutoWireViewModel="True">
-    <Grid />
+    <ContentControl mvvm:RegionManager.RegionName="Controls" />
 </Window>
