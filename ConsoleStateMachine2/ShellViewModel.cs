@@ -16,16 +16,16 @@ namespace ConsoleStateMachine2
         {
         }
 
-        public string Title => currentState.Title;
+        public string Title => CurrentState.Title;
 
         public void SwitchToRecorder()
         {
-            currentState.SwitchToRecorder();
+            CurrentState.SwitchToRecorder();
         }
 
         public void SwitchToPlayer()
         {
-            currentState.SwitchToPlayer();
+            CurrentState.SwitchToPlayer();
         }
     }
 }

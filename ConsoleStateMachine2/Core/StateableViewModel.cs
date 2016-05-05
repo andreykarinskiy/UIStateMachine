@@ -9,11 +9,11 @@ namespace ConsoleStateMachine2.Core
     {
         private readonly TViewModelState[] allStates;
 
-        protected TViewModelState currentState;
+        protected TViewModelState CurrentState { get; private set; }
 
         protected StateableViewModel(TViewModelState currentState, TViewModelState[] allStates, IEventAggregator eventAggregator)
         {
-            this.currentState = currentState;
+            this.CurrentState = currentState;
             this.allStates = allStates;
 
             eventAggregator
@@ -23,11 +23,17 @@ namespace ConsoleStateMachine2.Core
 
         private void ChangeState(Trigger trigger)
         {
-            currentState?.Exit();
+            CurrentState?.Exit();
 
-            currentState = allStates.Single(o => o.GetType() == trigger.State);
+            CurrentState = FindState(trigger);
 
-            currentState.Enter();
+            CurrentState.Enter();
+        }
+
+        private TViewModelState FindState(Trigger trigger)
+        {
+            var stateTrigger = trigger;
+            return allStates.Single(o => o.GetType() == stateTrigger.State);
         }
     }
 }
