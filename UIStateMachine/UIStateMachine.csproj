@@ -104,6 +104,8 @@
     <Compile Include="Events\PlayerSelected.cs" />
     <Compile Include="Events\RecorderSelected.cs" />
     <Compile Include="ShellBootstrapper.cs" />
+    <Compile Include="ViewModels\IRecorderViewModel.cs" />
+    <Compile Include="ViewModels\IShellViewModel.cs" />
     <Compile Include="ViewModels\MacroPlayerViewModel.cs" />
     <Compile Include="ViewModels\MacroRecorderViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
@@ -146,7 +148,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModels\RecorderStates\" />
+    <Folder Include="ViewModels\ShellStates\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

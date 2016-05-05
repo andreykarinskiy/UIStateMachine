@@ -4,26 +4,59 @@
     using Prism.Commands;
     using Prism.Events;
     using Prism.Mvvm;
-    using Prism.Regions;
 
     using UIStateMachine.Core;
     using UIStateMachine.Events;
 
-    public class MacroRecorderViewModel : BindableBase
+    public class MacroRecorderViewModel : BindableBase, IRecorderViewModel
     {
         private readonly IEventAggregator eventAggregator;
 
         public MacroRecorderViewModel(IEventAggregator eventAggregator)
         {
             this.eventAggregator = eventAggregator;
-            Stop = new DelegateCommand(ToPlayer, () => true);
+
+            Start = new DelegateCommand(StartRecording, CanStart);
+
+            Pause = new DelegateCommand(PauseRecording, CanPause);
+
+            Stop = new DelegateCommand(StopRecording, CanStop);
+        }
+
+        private void StartRecording()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void PauseRecording()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void StopRecording()
+        {
+            eventAggregator.Publish(new PlayerSelected());
+        }
+
+        public ICommand Start { get; }
+
+        public bool CanStart()
+        {
+            return false;
+        }
+
+        public ICommand Pause { get; }
+
+        public bool CanPause()
+        {
+            return false;
         }
 
         public ICommand Stop { get; }
 
-        private void ToPlayer()
+        public bool CanStop()
         {
-            eventAggregator.Publish(new PlayerSelected());
+            return true;
         }
     }
 }

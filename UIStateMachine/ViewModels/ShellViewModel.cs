@@ -14,32 +14,42 @@ namespace UIStateMachine.ViewModels
     using UIStateMachine.Events;
     using UIStateMachine.Views;
 
-    public class ShellViewModel : BindableBase
+    public class ShellViewModel : BindableBase, IShellViewModel
     {
         private readonly IRegionManager regionManager;
 
         public ShellViewModel(IRegionManager regionManager, IEventAggregator eventAggregator)
         {
             this.regionManager = regionManager;
-            Title = "UI state machine demo";
 
             regionManager.RegisterViewWithRegion("Controls", typeof(MacroRecorderView));
             regionManager.RegisterViewWithRegion("Controls", typeof(MacroPlayerView));
 
-            eventAggregator.Subscribe<RecorderSelected>(Handle);
-            eventAggregator.Subscribe<PlayerSelected>(Handle);
+            eventAggregator.Subscribe<RecorderSelected>(o => SwitchToRecorder());
+            eventAggregator.Subscribe<PlayerSelected>(o => SwitchToPlayer());
         }
 
-        private void Handle(RecorderSelected e)
+        //protected void ChangeState(ShellState newState)
+        //{
+        //    currentState?.Exit();
+
+        //    currentState = newState;
+
+        //    currentState.Enter();
+        //}
+
+        //public string Title => currentState?.Title;
+
+        public string Title { get; set; } = "state machine";
+
+        public void SwitchToRecorder()
         {
             regionManager.RequestNavigate("Controls", "MacroRecorderView");
         }
 
-        private void Handle(PlayerSelected e)
+        public void SwitchToPlayer()
         {
             regionManager.RequestNavigate("Controls", "MacroPlayerView");
         }
-
-        public string Title { get; set; }
     }
 }
