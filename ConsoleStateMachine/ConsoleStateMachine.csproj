@@ -63,6 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\StateableViewModel.cs" />
+    <Compile Include="Core\ViewModelState.cs" />
     <Compile Include="IShellViewModel.cs" />
     <Compile Include="PlayerState.cs" />
     <Compile Include="Program.cs" />
@@ -70,7 +72,7 @@
     <Compile Include="RecorderState.cs" />
     <Compile Include="ShellState.cs" />
     <Compile Include="ShellViewModel.cs" />
-    <Compile Include="Trigger.cs" />
+    <Compile Include="Core\Trigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

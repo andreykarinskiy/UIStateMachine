@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleStateMachine
 {
+    using ConsoleStateMachine.Core;
+
     using Prism.Events;
     using Prism.Mvvm;
 
@@ -46,17 +48,22 @@ namespace ConsoleStateMachine
 
         public virtual void Enter()
         {
-            Console.WriteLine(this.GetType().Name + " enter");
+            Console.WriteLine(GetType().Name + " enter");
         }
 
         public virtual void Exit()
         {
-            Console.WriteLine(this.GetType().Name + " exit");
+            Console.WriteLine(GetType().Name + " exit");
         }
 
         protected void ChangeState(Trigger trigger)
         {
             eventAggregator.GetEvent<PubSubEvent<Trigger>>().Publish(trigger);
+        }
+
+        protected void ChangeState<TState>() where TState : ShellState
+        {
+            ChangeState(new Trigger<TState>());
         }
     }
 }

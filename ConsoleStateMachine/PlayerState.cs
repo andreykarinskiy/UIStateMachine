@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleStateMachine
 {
+    using ConsoleStateMachine.Core;
+
     using Prism.Events;
 
     public class PlayerState : ShellState
@@ -17,7 +19,7 @@ namespace ConsoleStateMachine
         public override void SwitchToRecorder()
         {
             Console.WriteLine("switch to Recorder");
-            ChangeState(new Trigger(typeof(RecorderState)));
+            ChangeState<RecorderState>();
         }
 
         public override void SwitchToPlayer()

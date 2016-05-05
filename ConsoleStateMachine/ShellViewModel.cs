@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleStateMachine
 {
+    using ConsoleStateMachine.Core;
+
     using Microsoft.Practices.Unity;
 
     using Prism.Events;
