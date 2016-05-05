@@ -11,10 +11,10 @@ namespace ConsoleStateMachine2.Core
 
         protected TViewModelState currentState;
 
-        protected StateableViewModel(TViewModelState[] allStates, TViewModelState currentState, IEventAggregator eventAggregator)
+        protected StateableViewModel(TViewModelState currentState, TViewModelState[] allStates, IEventAggregator eventAggregator)
         {
-            this.allStates = allStates;
             this.currentState = currentState;
+            this.allStates = allStates;
 
             eventAggregator
                 .GetEvent<PubSubEvent<Trigger>>()

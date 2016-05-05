@@ -12,7 +12,7 @@ namespace ConsoleStateMachine2
 {
     public class ShellViewModel : StateableViewModel<ShellState>, IShellViewModel
     {
-        public ShellViewModel(ShellState[] allStates, [Dependency("Recorder")] ShellState currentState, IEventAggregator eventAggregator) : base(allStates, currentState, eventAggregator)
+        public ShellViewModel([Dependency("Recorder")] ShellState currentState, ShellState[] allStates, IEventAggregator eventAggregator) : base(currentState, allStates, eventAggregator)
         {
         }
 
