@@ -20,8 +20,9 @@ namespace ConsoleStateMachine
 
         public ShellViewModel([Dependency("Recorder")]ShellState initialState, ShellState[] states, IEventAggregator eventAggregator)
         {
-            currentState = initialState;
             this.states = states;
+            this.currentState = initialState;
+
             eventAggregator.GetEvent<PubSubEvent<Trigger>>().Subscribe(ChangeState);
         }
 
