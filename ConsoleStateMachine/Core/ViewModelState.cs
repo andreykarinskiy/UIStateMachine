@@ -21,7 +21,9 @@
 
         protected void ChangeState(Trigger trigger)
         {
-            eventAggregator.GetEvent<PubSubEvent<Trigger>>().Publish(trigger);
+            eventAggregator
+                .GetEvent<PubSubEvent<Trigger>>()
+                .Publish(trigger);
         }
 
         protected void ChangeState<TState>() where TState : ShellState

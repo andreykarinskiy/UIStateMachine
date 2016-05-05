@@ -16,7 +16,9 @@
             this.allStates = allStates;
             this.currentState = currentState;
 
-            eventAggregator.GetEvent<PubSubEvent<Trigger>>().Subscribe(ChangeState);
+            eventAggregator
+                .GetEvent<PubSubEvent<Trigger>>()
+                .Subscribe(ChangeState);
         }
 
         private void ChangeState(Trigger trigger)
