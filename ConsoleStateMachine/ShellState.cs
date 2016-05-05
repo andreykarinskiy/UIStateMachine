@@ -14,13 +14,12 @@ namespace ConsoleStateMachine
     public abstract class ShellState : BindableBase, IShellViewModel
     {
         private readonly IEventAggregator eventAggregator;
+        private string title;
 
         protected ShellState(IEventAggregator eventAggregator)
         {
             this.eventAggregator = eventAggregator;
         }
-
-        private string title;
 
         public string Title
         {
@@ -63,7 +62,7 @@ namespace ConsoleStateMachine
 
         protected void ChangeState<TState>() where TState : ShellState
         {
-            ChangeState(new Trigger<TState>());
+            //ChangeState(new Trigger<TState>());
         }
     }
 }

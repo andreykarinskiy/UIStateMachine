@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIStateMachine", "UIStateMachine\UIStateMachine.csproj", "{7E1203D0-B02D-477E-8428-B44C5106F66F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleStateMachine", "ConsoleStateMachine\ConsoleStateMachine.csproj", "{49ADC879-41F8-47B0-8034-56B17A471778}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleStateMachine2", "ConsoleStateMachine2\ConsoleStateMachine2.csproj", "{2E9928C9-BD91-4CFA-AD90-D8068B24EEAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{7E1203D0-B02D-477E-8428-B44C5106F66F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E1203D0-B02D-477E-8428-B44C5106F66F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E1203D0-B02D-477E-8428-B44C5106F66F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49ADC879-41F8-47B0-8034-56B17A471778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49ADC879-41F8-47B0-8034-56B17A471778}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49ADC879-41F8-47B0-8034-56B17A471778}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49ADC879-41F8-47B0-8034-56B17A471778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9928C9-BD91-4CFA-AD90-D8068B24EEAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9928C9-BD91-4CFA-AD90-D8068B24EEAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9928C9-BD91-4CFA-AD90-D8068B24EEAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9928C9-BD91-4CFA-AD90-D8068B24EEAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

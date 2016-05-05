@@ -1,8 +1,10 @@
-﻿namespace ConsoleStateMachine.Core
-{
-    using Prism.Events;
+﻿using ConsoleStateMachine2.States;
+using Prism.Events;
+using Prism.Mvvm;
 
-    public abstract class ViewModelState
+namespace ConsoleStateMachine2.Core
+{
+    public abstract class ViewModelState : BindableBase
     {
         private readonly IEventAggregator eventAggregator;
 
@@ -28,7 +30,7 @@
 
         protected void ChangeState<TState>() where TState : ShellState
         {
-            //ChangeState(new Trigger<TState>());
+            ChangeState(new Trigger<TState>());
         }
     }
 }
