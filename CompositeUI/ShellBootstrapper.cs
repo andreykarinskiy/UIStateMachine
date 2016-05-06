@@ -10,7 +10,7 @@ namespace CompositeUI
     using System.Reflection;
     using System.Windows;
 
-    using CompositeUI.ViewModels.ShellViewModel.States;
+    using CompositeUI.ViewModels.Shell.States;
 
     using Microsoft.Practices.Unity;
 

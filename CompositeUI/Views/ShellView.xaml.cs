@@ -2,10 +2,6 @@
 {
     using System.Windows;
 
-    using CompositeUI.ViewModels;
-
-    using Microsoft.Practices.Unity;
-
     /// <summary>
     /// Логика взаимодействия для ShellView.xaml
     /// </summary>

@@ -1,7 +1,7 @@
-﻿namespace CompositeUI.ViewModels.ShellViewModel
+﻿namespace CompositeUI.ViewModels.Shell
 {
     using CompositeUI.Core;
-    using CompositeUI.ViewModels.ShellViewModel.States;
+    using CompositeUI.ViewModels.Shell.States;
 
     using Microsoft.Practices.Unity;
 

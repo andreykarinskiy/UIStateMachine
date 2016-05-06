@@ -1,4 +1,4 @@
-﻿namespace CompositeUI.ViewModels.ShellViewModel.States
+﻿namespace CompositeUI.ViewModels.Shell.States
 {
     using CompositeUI.Core;
 

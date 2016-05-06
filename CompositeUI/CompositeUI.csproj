@@ -96,11 +96,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\ShellViewModel\IShellViewModel.cs" />
-    <Compile Include="ViewModels\ShellViewModel\ShellViewModel.cs" />
-    <Compile Include="ViewModels\ShellViewModel\States\ShellPlayerState.cs" />
-    <Compile Include="ViewModels\ShellViewModel\States\ShellRecorderState.cs" />
-    <Compile Include="ViewModels\ShellViewModel\States\ShellState.cs" />
+    <Compile Include="ViewModels\Shell\IShellViewModel.cs" />
+    <Compile Include="ViewModels\Shell\ShellViewModel.cs" />
+    <Compile Include="ViewModels\Shell\States\ShellPlayerState.cs" />
+    <Compile Include="ViewModels\Shell\States\ShellRecorderState.cs" />
+    <Compile Include="ViewModels\Shell\States\ShellState.cs" />
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -134,7 +134,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModels\Player\" />
+    <Folder Include="ViewModels\Recorder\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
