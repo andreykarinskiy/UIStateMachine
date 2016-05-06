@@ -1,7 +1,5 @@
 ﻿namespace CompositeUI.Core
 {
-    using CompositeUI.ViewModels.States;
-
     using Prism.Events;
     using Prism.Mvvm;
 

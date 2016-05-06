@@ -1,4 +1,4 @@
-﻿namespace CompositeUI.ViewModels.States
+﻿namespace CompositeUI.ViewModels.ShellViewModel.States
 {
     using Prism.Events;
 
@@ -6,12 +6,12 @@
     {
         public ShellPlayerState(IEventAggregator eventAggregator) : base(eventAggregator)
         {
-            Title = "Player";
+            this.Title = "Player";
         }
 
         public override void SwitchToRecorder()
         {
-            ChangeState<ShellRecorderState>();
+            this.ChangeState<ShellRecorderState>();
         }
 
         public override void SwitchToPlayer()

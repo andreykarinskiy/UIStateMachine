@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CompositeUI.ViewModels.States
+﻿namespace CompositeUI.ViewModels.ShellViewModel.States
 {
-    using System.Windows;
-
     using Prism.Events;
 
     public class ShellRecorderState : ShellState
     {
         public ShellRecorderState(IEventAggregator eventAggregator) : base(eventAggregator)
         {
-            Title = "Recorder";
+            this.Title = "Recorder";
         }
 
         public override void SwitchToRecorder()
@@ -23,7 +15,7 @@ namespace CompositeUI.ViewModels.States
 
         public override void SwitchToPlayer()
         {
-            ChangeState<ShellPlayerState>();
+            this.ChangeState<ShellPlayerState>();
         }
     }
 }

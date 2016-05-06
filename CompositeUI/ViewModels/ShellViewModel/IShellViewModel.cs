@@ -1,4 +1,4 @@
-﻿namespace CompositeUI.ViewModels
+﻿namespace CompositeUI.ViewModels.ShellViewModel
 {
     public interface IShellViewModel
     {

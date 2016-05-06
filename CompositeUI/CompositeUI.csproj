@@ -96,11 +96,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\IShellViewModel.cs" />
-    <Compile Include="ViewModels\ShellViewModel.cs" />
-    <Compile Include="ViewModels\States\ShellPlayerState.cs" />
-    <Compile Include="ViewModels\States\ShellRecorderState.cs" />
-    <Compile Include="ViewModels\States\ShellState.cs" />
+    <Compile Include="ViewModels\ShellViewModel\IShellViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel\ShellViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel\States\ShellPlayerState.cs" />
+    <Compile Include="ViewModels\ShellViewModel\States\ShellRecorderState.cs" />
+    <Compile Include="ViewModels\ShellViewModel\States\ShellState.cs" />
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
       <SubType>Code</SubType>

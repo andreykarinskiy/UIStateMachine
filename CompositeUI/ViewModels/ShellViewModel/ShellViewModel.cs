@@ -1,10 +1,11 @@
-﻿namespace CompositeUI.ViewModels
+﻿namespace CompositeUI.ViewModels.ShellViewModel
 {
     using CompositeUI.Core;
-    using CompositeUI.ViewModels.States;
-    using Microsoft.Practices.Unity;
-    using Prism.Events;
+    using CompositeUI.ViewModels.ShellViewModel.States;
 
+    using Microsoft.Practices.Unity;
+
+    using Prism.Events;
 
     public class ShellViewModel : StateableViewModel<ShellState>, IShellViewModel
     {
@@ -12,16 +13,16 @@
         {
         }
 
-        public string Title => CurrentState.Title;
+        public string Title => this.CurrentState.Title;
 
         public void SwitchToRecorder()
         {
-            CurrentState.SwitchToRecorder();
+            this.CurrentState.SwitchToRecorder();
         }
 
         public void SwitchToPlayer()
         {
-            CurrentState.SwitchToRecorder();
+            this.CurrentState.SwitchToRecorder();
         }
     }
 }
