@@ -1,8 +1,8 @@
-﻿namespace CompositeUI.Core
-{
-    using Prism.Events;
-    using Prism.Mvvm;
+﻿using Prism.Events;
+using Prism.Mvvm;
 
+namespace Core.Mvvm
+{
     public abstract class ViewModelState : BindableBase
     {
         private readonly IEventAggregator eventAggregator;

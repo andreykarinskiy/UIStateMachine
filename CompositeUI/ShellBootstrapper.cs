@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CompositeUI.ViewModels.States;
+using Prism.Modularity;
 
 namespace CompositeUI
 {
     using System.Globalization;
     using System.Reflection;
     using System.Windows;
-
-    using CompositeUI.ViewModels.Shell.States;
-
     using Microsoft.Practices.Unity;
 
     using Prism.Events;
@@ -41,12 +40,21 @@ namespace CompositeUI
         {
             base.ConfigureViewModelLocator();
 
-            ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver((viewType) =>
-            {
-                var assembly = GetType().Assembly;
-                var viewModelName = viewType.GetTypeInfo().Name + "Model";
-                return assembly.GetTypes().SingleOrDefault(o => o.Name == viewModelName);
-            });
+            //ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver((viewType) =>
+            //{
+            //    var assembly = GetType().Assembly;
+            //    var viewModelName = viewType.GetTypeInfo().Name + "Model";
+            //    return assembly.GetTypes().SingleOrDefault(o => o.Name == viewModelName);
+            //});
+        }
+
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            var catalog = new ModuleCatalog();
+
+            catalog.AddModule(typeof (EventRecorder.ModuleInitializer));
+
+            return catalog;
         }
 
         public void Dispose()

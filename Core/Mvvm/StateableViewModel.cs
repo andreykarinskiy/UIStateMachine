@@ -1,10 +1,9 @@
-﻿namespace CompositeUI.Core
+﻿using System.Linq;
+using Prism.Events;
+using Prism.Mvvm;
+
+namespace Core.Mvvm
 {
-    using System.Linq;
-
-    using Prism.Events;
-    using Prism.Mvvm;
-
     public abstract class StateableViewModel<TViewModelState> : BindableBase
         where TViewModelState : ViewModelState
     {

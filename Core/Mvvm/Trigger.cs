@@ -1,7 +1,7 @@
-﻿namespace CompositeUI.Core
-{
-    using System;
+﻿using System;
 
+namespace Core.Mvvm
+{
     public abstract class Trigger
     {
         public abstract Type State { get; }

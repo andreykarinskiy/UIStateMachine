@@ -1,9 +1,8 @@
-﻿namespace CompositeUI.ViewModels.Shell.States
+﻿using Core.Mvvm;
+using Prism.Events;
+
+namespace CompositeUI.ViewModels.States
 {
-    using CompositeUI.Core;
-
-    using Prism.Events;
-
     public abstract class ShellState : ViewModelState, IShellViewModel
     {
         protected ShellState(IEventAggregator eventAggregator) : base(eventAggregator)

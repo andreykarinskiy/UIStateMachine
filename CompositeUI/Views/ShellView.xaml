@@ -10,5 +10,7 @@
         Height="350"
         mvvm:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d">
-    <Grid />
+    <Grid>
+        <ContentControl mvvm:RegionManager.RegionName="Controls"/>
+    </Grid>
 </Window>

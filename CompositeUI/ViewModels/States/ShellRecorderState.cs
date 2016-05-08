@@ -1,7 +1,7 @@
-﻿namespace CompositeUI.ViewModels.Shell.States
-{
-    using Prism.Events;
+﻿using Prism.Events;
 
+namespace CompositeUI.ViewModels.States
+{
     public class ShellRecorderState : ShellState
     {
         public ShellRecorderState(IEventAggregator eventAggregator) : base(eventAggregator)
