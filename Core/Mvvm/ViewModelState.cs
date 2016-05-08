@@ -3,7 +3,7 @@ using Prism.Mvvm;
 
 namespace Core.Mvvm
 {
-    public abstract class ViewModelState : BindableBase
+    public abstract class ViewModelState : ViewModel
     {
         private readonly IEventAggregator eventAggregator;
 

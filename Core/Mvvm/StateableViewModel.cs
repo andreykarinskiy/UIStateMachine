@@ -4,7 +4,7 @@ using Prism.Mvvm;
 
 namespace Core.Mvvm
 {
-    public abstract class StateableViewModel<TViewModelState> : BindableBase
+    public abstract class StateableViewModel<TViewModelState> : ViewModel
         where TViewModelState : ViewModelState
     {
         private readonly TViewModelState[] allStates;
