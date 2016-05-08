@@ -12,11 +12,11 @@ namespace Core.Mvvm
             this.eventAggregator = eventAggregator;
         }
 
-        internal virtual void Enter()
+        public virtual void Enter()
         {
         }
 
-        internal virtual void Exit()
+        public virtual void Exit()
         {
         }
 

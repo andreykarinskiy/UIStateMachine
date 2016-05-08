@@ -21,7 +21,7 @@ namespace EventRecorder.ViewModels.States
 
         protected override void StartRecording()
         {
-            
+            ChangeState<RecordingState>();
         }
     }
 }

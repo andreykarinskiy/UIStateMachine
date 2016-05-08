@@ -25,6 +25,7 @@ namespace EventRecorder
         public void Initialize()
         {
             container.RegisterType<RecorderState, ReadyRecorderState>("Recorder.Ready", new ContainerControlledLifetimeManager());
+            container.RegisterType<RecorderState, RecordingState>("Recorder.Recording", new ContainerControlledLifetimeManager());
 
             regionManager.RegisterViewWithRegion("Controls", typeof(EventRecorderView));
         }

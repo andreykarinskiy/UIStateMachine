@@ -17,6 +17,12 @@ namespace EventRecorder.ViewModels
     {
         public EventRecorderViewModel([Microsoft.Practices.Unity.DependencyAttribute("Recorder.Ready")]RecorderState currentState, RecorderState[] allStates, IEventAggregator eventAggregator) : base(currentState, allStates, eventAggregator)
         {
+            eventAggregator.GetEvent<PubSubEvent<string>>().Subscribe(Handle);
+        }
+
+        private void Handle(string pn)
+        {
+            OnPropertyChanged(pn);
         }
 
         public string Status => CurrentState.Status;

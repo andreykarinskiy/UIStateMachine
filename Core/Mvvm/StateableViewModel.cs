@@ -23,9 +23,16 @@ namespace Core.Mvvm
 
         private void ChangeState(Trigger trigger)
         {
+            var newState = FindState(trigger);
+
+            if (newState == null)
+            {
+                return;
+            }
+
             CurrentState?.Exit();
 
-            CurrentState = FindState(trigger);
+            CurrentState = newState;
 
             CurrentState.Enter();
         }
@@ -33,7 +40,7 @@ namespace Core.Mvvm
         private TViewModelState FindState(Trigger trigger)
         {
             var stateTrigger = trigger;
-            return allStates.Single(o => o.GetType() == stateTrigger.State);
+            return allStates.SingleOrDefault(o => o.GetType() == stateTrigger.State);
         }
     }
 }

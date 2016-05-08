@@ -95,6 +95,7 @@
     <Compile Include="ViewModels\IEventRecorderViewModel.cs" />
     <Compile Include="ViewModels\States\ReadyRecorderState.cs" />
     <Compile Include="ViewModels\States\RecorderState.cs" />
+    <Compile Include="ViewModels\States\RecordingState.cs" />
     <Compile Include="Views\EventRecorderView.xaml.cs">
       <DependentUpon>EventRecorderView.xaml</DependentUpon>
     </Compile>
